@@ -28,9 +28,10 @@ proxy.on('proxyRes', (proxyRes, req, res) => {
     console.log(JSON.stringify({
       res_statusCode: proxyRes.statusCode,
       res_statusMessage: proxyRes.statusMessage,
-      req_headers: proxyRes.headers,
+      res_headers: proxyRes.headers,
       req_headers: req.headers,
       req_url: req.url,
+      req_method: req.method,
       req_body: req.body
     }))
   }
